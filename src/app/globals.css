@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 @layer components {
+  .primary-element {
+    @apply bg-primary_main
+  }
   .btn-footer {
     @apply bg-primary_main text-xs text-text_secondary hover:text-secondary_main
   }
+  .stack {
+    @apply flex content-center justify-between flex-wrap
+  }
 }
+
