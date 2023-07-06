@@ -10,18 +10,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        logo_main : '#F0B90B',
-        primary_main : 'rgb(22, 26, 30)',
-        secondary_main : 'rgb(252, 213, 53)',
-        background : 'rgb(22, 26, 30)',
-        paper : 'rgb(30, 32, 38)',
-        text_primary: '#EAECEF',
-        text_secondary: 'rgb(183, 189, 198)',
-        text_disabled: 'rgba(249,246,246,0.38)',
-        text_tertiary: '#848E9C',
-        error_main: 'rgb(246, 70, 93)',
-        success_main: 'rgb(14, 203, 129)',
-        divider: '#3a3b3f',
+        logo_main : 'var(--color-logo_main)',
+        primary_main : 'var(--color-primary_main)',
+        secondary_main : 'var(--color-secondary_main)',
+        background : 'var(--color-background)',
+        paper_lighter : 'var(--color-paper_lighter)',
+        paper : 'var(--color-paper)',
+        paper_weird : 'var(--color-paper_weird)',
+        text_primary: 'var(--color-text_primary)',
+        text_secondary: 'var(--color-text_secondary)',
+        text_disabled: 'var(--color-text_disabled)',
+        text_tertiary: 'var(--color-text_tertiary)',
+        error_main: 'var(--color-error_main)',
+        success_main: 'var(--color-success_main)',
+        divider: 'var(--color-divider)'
       },
       fontFamily: {
         sans: [

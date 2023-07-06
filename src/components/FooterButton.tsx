@@ -16,12 +16,12 @@ export default function FooterButton ({
   //          when hovering. 
 
   return (
-    <button className = 'btn-footer'>
-        <div className='w-full flex flex-row content-center justify-center flex-wrap'>
-          <div className='mx-1 my-auto'>
+    <button className = 'btn-footer border-r border-divider px-2'>
+        <div className='w-full flex flex-row content-center justify-center flex-nowrap'>
+          <div className='mr-1 my-auto'>
             {children}
           </div>
-          <p className='text-xs mx-1 font-sans'>
+          <p className='text-xs font-sans whitespace-nowrap'>
             {displayText}
           </p>
         </div>
