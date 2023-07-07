@@ -4,7 +4,9 @@ export default function RegisterButton () {
   return (
     <Button
     variant="contained"
-    color="secondary">
+    color="secondary"
+    className="bg-none"
+    >
       Register
     </Button>
   )

@@ -1,5 +1,11 @@
 import { Stack } from "@mui/material";
+import DownloadsButton from "./DownloadsButton";
+import HelpMenuButton from "./HelpMenuButton";
+import LanguageCurrencyButton from "./LanguageCurrencyButton";
+import LoginButton from "./LoginButton";
+import NotificationsButton from "./NotificationsButton";
 import RegisterButton from "./RegisterButton";
+import SettingsButton from "./SettingsButton";
 import StyledButton from "./StyledButton";
 
 export default function NavBarRight () {
@@ -9,13 +15,13 @@ export default function NavBarRight () {
     direction="row"
     justifyContent="space-between"
     >
-      <Login/>
+      <LoginButton/>
       <RegisterButton/>
-      <Announcements/>
-      <Downloads/>
-      <LanguageCurrency/>
-      <HelpMenu/>
-      <Settings/>
+      <NotificationsButton/>
+      <DownloadsButton/>
+      <LanguageCurrencyButton/>
+      <HelpMenuButton/>
+      <SettingsButton/>
     </Stack>
   )
 }

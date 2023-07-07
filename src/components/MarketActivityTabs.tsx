@@ -1,4 +1,6 @@
 import { Box, Tab, Tabs } from "@mui/material";
+import { useState } from "react";
+import MarketMoverRow from "./MarketMoverRow";
 import TabPanel from "./TabPanel";
 
 function a11yProps(index: number) {
@@ -10,24 +12,44 @@ function a11yProps(index: number) {
 
 export default function MarketActivityTabs () {
 
+  const [data, setData] = useState(null);
+
+  // data is a state that is supposed to changed upon the value of "value" changing
+
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+        <Tabs 
+          value={value} onChange={(value) => {
+            setData(getNewData(value))
+          }} 
+          aria-label="basic tabs example"
+        >
+          <Tab label="All" {...a11yProps(0)} />
+          <Tab label="Change" {...a11yProps(1)} />
+          <Tab label="New High/Low" {...a11yProps(2)} />
+          <Tab label="Fluctuation" {...a11yProps(2)} />
+          <Tab label="Volume" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
+      <Box
+      sx={{
+        overflow: 'auto'
+      }}
+      >
+        {data.map((e) => (
+          <MarketMoverRow 
+            pairFirst={e.pairFirst}
+            pairSecond={e.pairSecond}
+            time={e.time}
+            changeText={e.changeText}
+            changeDesc={e.changeDesc}
+            changeColor={e.changeColor}
+            changeIcon={e.changeIcon}
+            pairLink={e.link}
+          />
+        ))}
+      </Box>
     </Box>
   );
 

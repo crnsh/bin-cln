@@ -1,5 +1,6 @@
 import { Typography, Stack } from "@mui/material";
 import Link from "next/link";
+import MarketActivityTabs from "./MarketActivityTabs";
 
 export default function MarketActivity () {
 
