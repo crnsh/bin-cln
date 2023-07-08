@@ -1,4 +1,8 @@
-This is my attempt at creating a Binance clone. Storybook was malfunctioning with module aliases, so I've created a single storybook without using module aliases. Make sure you have npm version `9.5.0`.
+This is my attempt at creating a Binance clone. Storybook was malfunctioning with module aliases, so I've created a single storybook without using module aliases. Make sure you have npm version `9.5.0`. Here are some things to note.
+
+- Theming -> Light and Dark Mode (top right button)
+- Storybook
+- Types are written carefully
 
 **Note** The trading view widget takes a few refreshes before turning on.
 
