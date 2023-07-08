@@ -7,6 +7,8 @@ export default function TopBody () {
   return(
     <Stack
     direction='row'
+    borderBottom={1}
+    borderColor='divider'
     >
       <TopBodyLeft/>
       <TopBodyRight/>

@@ -18,7 +18,7 @@ export default function OrderbookTableFull ({ data } : {
 
   return (
     <TableContainer component={Paper}>
-      <Table>
+      <Table size="small">
         <TableHead>
           <TableRow>
             <TableCell>Price(BNB)</TableCell>

@@ -3,9 +3,13 @@ import { Button } from "@mui/material";
 export default function RegisterButton () {
   return (
     <Button
-    variant="contained"
+    variant='contained'
     color="secondary"
-    className="bg-none"
+    sx={{
+      textTransform: 'none',
+      fontWeight: "600",
+      bgcolor: 'secondary'
+    }}
     >
       Register
     </Button>

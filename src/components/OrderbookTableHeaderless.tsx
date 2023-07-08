@@ -16,7 +16,7 @@ export default function OrderbookTableHeaderless () {
 
   return (
     <TableContainer component={Paper}>
-      <Table>
+      <Table size='small'>
         <TableBody>
           {sampleData.map((row) => (
             <TableRow

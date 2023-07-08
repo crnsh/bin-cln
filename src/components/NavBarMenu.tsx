@@ -5,7 +5,8 @@ import React from "react";
 interface MenuItem {
   svgElement : React.ReactNode,
   title : string,
-  description : string
+  description : string,
+  onclick: () => void
 }
 
 export default function NavBarMenu ({ children, menuItems } : {
@@ -30,12 +31,12 @@ export default function NavBarMenu ({ children, menuItems } : {
       <Button
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        onMouseOver={handleMouseOver}
         onClick={handleMouseOver}
         variant="text"
         sx={{
           textTransform: 'none',
-          color: 'text.primary'
+          color: 'text.primary',
+          fontWeight: 600
           
         }}
       >
@@ -60,6 +61,7 @@ export default function NavBarMenu ({ children, menuItems } : {
           svgElement={element.svgElement}
           title={element.title}
           description={element.description}
+          onClose={handleClose}
         />
        ))} 
       </Container>

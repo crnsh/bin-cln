@@ -28,9 +28,16 @@ export default function Trades () {
   //          Content "Login or Register"
 
   return (
-    <Box>
+    <Box
+    borderBottom={1}
+    borderColor='divider'
+    pb="1rem"
+    >
       <Box>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
+          indicatorColor="secondary"
+          textColor="secondary"
+        >
           <Tab label="Market Trades" {...a11yProps(0)} />
           <Tab label="My Trades" {...a11yProps(1)} />
         </Tabs>

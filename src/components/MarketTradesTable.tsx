@@ -7,8 +7,14 @@ export default function MarketTradesTable () {
   //          Rows with data
 
   return (
-    <TableContainer component={Paper}>
-      <Table size='small'>
+    <TableContainer component={Paper}
+      sx={{
+        px: 0,
+        height: "400px"
+        
+      }}
+    >
+      <Table size='small' stickyHeader>
         <TableHead>
           <TableRow>
             <TableCell>Price(BNB)</TableCell>

@@ -8,8 +8,11 @@ export default function HeaderTopBodyLeft () {
     <Stack
       direction='row'
       justifyContent="space-between"
+      py='0.5rem'
       sx={{
-        width: 1
+        width: 1,
+        borderBottom: 1,
+        borderColor: 'divider'
       }}
     >
       <HeaderTopBodyLeftPairTitle/>

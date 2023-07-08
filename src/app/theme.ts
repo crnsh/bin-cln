@@ -66,6 +66,10 @@ export const themeSettings = (mode: PaletteMode) => ({
       'IBM Plex Sans', 
       'Open Sans'
     ].join(','),
+    caption: {
+      fontSize: 12,
+      color: 'text.secondary',
+    }
   },
 });
 

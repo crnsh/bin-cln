@@ -1,3 +1,4 @@
+import { Box, Button, Link, Typography } from '@mui/material';
 import React from 'react';
 
 export default function FooterButton ({ 
@@ -16,16 +17,31 @@ export default function FooterButton ({
   //          when hovering. 
 
   return (
-    <button className = 'btn-footer border-r border-divider px-2'>
-        <div className='w-full flex flex-row content-center justify-center flex-nowrap'>
-          <div className='mr-1 my-auto'>
-            {children}
-          </div>
-          <p className='text-xs font-sans whitespace-nowrap'>
-            {displayText}
-          </p>
-        </div>
-    </button>
+    <Link
+      href=''
+      color='text.secondary'
+      underline='none'
+      display='flex'
+      flexDirection='row'
+      justifyContent='end'
+      alignItems='center'
+      px='0.3rem'
+      borderRight={1}
+      borderColor='divider'
+      sx={{
+        textTransform: 'none'
+      }}
+    >
+      <Box mr='0.5rem'>
+        {children}
+      </Box>
+      <Typography variant='caption'
+      noWrap
+      >
+        {displayText}
+      </Typography>
+
+    </Link>
   );
 
 }

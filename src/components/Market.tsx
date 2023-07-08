@@ -4,12 +4,14 @@ import { DataGrid, GridColDef, GridRowsProp } from "@mui/x-data-grid";
 export default function Market () {
   
   const rows: GridRowsProp = [
-    { id : 1, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { id : 2, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { id : 3, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { id : 4, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { id : 5, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { id : 6, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, priceColor: 'green', change: '-0.71%', changeColor: 'green'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, priceColor: 'green', change: '-0.71%', changeColor: 'green'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, priceColor: 'green', change: '-0.71%', changeColor: 'green'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, priceColor: 'green', change: '-0.71%', changeColor: 'green'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, priceColor: 'green', change: '-0.71%', changeColor: 'green'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, priceColor: 'green', change: '-0.71%', changeColor: 'green'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, priceColor: 'green', change: '-0.71%', changeColor: 'green'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, priceColor: 'green', change: '-0.71%', changeColor: 'green'},
   ]
 
   const columns: GridColDef[] = [
@@ -19,7 +21,11 @@ export default function Market () {
   ]
   
   return (
-    <Box>
+    <Box
+      borderBottom={1}
+      pb="1rem"
+      borderColor="divider"
+    >
       <DataGrid density="compact" rows={rows} columns={columns}/>
     </Box>
   )

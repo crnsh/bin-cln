@@ -6,7 +6,9 @@ import Trades from "./Trades";
 export default function TopBodyRight () {
 
   return (
-    <Stack>
+    <Stack
+    flexGrow={0}
+    >
       <Market/>
       <Trades/>
       <MarketActivity/>

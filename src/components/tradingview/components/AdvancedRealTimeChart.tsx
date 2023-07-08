@@ -133,11 +133,6 @@ const AdvancedRealTimeChart: React.FC<AdvancedRealTimeChartProps> = ({
         containerId={container_id}
         type="Widget"
       ></Widget>
-      <Copyright
-        copyrightStyles={copyrightStyles}
-        href={`https://www.tradingview.com/symbols/${symbol}`}
-        spanText={`${symbol} Chart`}
-      />
     </div>
   );
 };

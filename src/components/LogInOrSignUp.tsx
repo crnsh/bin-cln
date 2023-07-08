@@ -6,7 +6,7 @@ export default function LogInOrSignUp () {
     >
       <Stack
       direction='row'
-      height={300}
+      height="300px"
       justifyContent='center'
       alignItems='center'>
         <Typography

@@ -67,16 +67,24 @@ export default function MarketActivityTabs () {
   const [value, setValue] = React.useState(0);
   const [data, setData] = useState<MarketActivityRow[]>([]);
 
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setData(getNewData(newValue));
+    setValue(newValue);
+  };
+
   // data is a state that is supposed to changed upon the value of "value" changing
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box
+    width='350px'
+    >
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs 
-          value={value} onChange={(value) => {
-            setData(getNewData(value))
-          }} 
+          value={value} onChange={handleChange} 
           aria-label="basic tabs example"
+          variant='scrollable'
+          textColor="secondary"
+          indicatorColor="secondary"
         >
           <Tab label="All" {...a11yProps(0)} />
           <Tab label="Change" {...a11yProps(1)} />

@@ -6,8 +6,8 @@ export default function LoginButton () {
     variant="text"
     sx={{
       textTransform: 'none',
-      color: 'text.primary'
-      
+      color: 'text.primary',
+      fontWeight: "600"
     }}
     >
       Login

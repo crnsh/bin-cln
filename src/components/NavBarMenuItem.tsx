@@ -1,9 +1,10 @@
 import { MenuItem, Stack, Typography } from "@mui/material";
 
-export default function NavBarMenuItem ({ svgElement, title, description } : {
+export default function NavBarMenuItem ({ svgElement, title, description, onClick } : {
   svgElement : React.ReactNode,
   title : string,
-  description : string
+  description : string,
+  onClick: () => void
 }) {
 
   // This returns a MenuItem with the appropriate color that has the inputted SVG element to its left and 
@@ -15,19 +16,26 @@ export default function NavBarMenuItem ({ svgElement, title, description } : {
         borderRadius: 1,
         p: 2
       }}
+      onClick={onClick}
     >
       {svgElement}
       <Stack
         direction='column'
       >
         <Typography
+          fontWeight={600}
+          variant="body1"
           sx={{
-            color: ''
+            color: 'text.primary'
           }}
         >
           {title}
         </Typography>
-        <Typography variant="caption">{description}</Typography>
+        <Typography variant="caption"
+          sx={{
+            color: 'text.secondary'
+          }}
+        >{description}</Typography>
       </Stack>
     </MenuItem>
   );

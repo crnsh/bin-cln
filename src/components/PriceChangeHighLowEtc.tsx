@@ -1,11 +1,27 @@
 import { Stack, Typography } from "@mui/material";
 
+function getFirstPair() {
+  return "BTC"
+}
+
+function getSecondPair() {
+  return 'USDT'
+}
+
 function getPrice() {
-  return 10
+  return '50,000.00'
+}
+
+function getPriceColor(): 'success' | 'error' {
+  return 'success'
+}
+
+function get24HourChangeColor(): 'success' | 'error' {
+  return 'error'
 }
 
 function getPriceInCurrency() {
-  return 100
+  return '$100'
 }
 
 function get24HourChange() {
@@ -28,33 +44,90 @@ function get24HourVolumeBNB() {
   return 1000
 }
 
+function changePercentage() {
+  return '-0.45%'
+}
 
 export default function PriceChangeHighLowEtc () {
+
   return (
-    <Stack direction='row'>
+    <Stack 
+      direction='row'
+      spacing='1rem'
+      alignItems='center'
+    >
       <Stack>
-        <Typography>{getPrice()}</Typography>
-        <Typography>{getPriceInCurrency()}</Typography>
+        <Typography
+          color='error'
+          fontWeight={600}
+        >
+          {getPrice()}
+        </Typography>
+        <Typography 
+          variant="caption" 
+          color='text.primary'
+          fontWeight={600}
+        >{getPriceInCurrency()}</Typography>
       </Stack>
       <Stack>
-        <Typography>24h Change</Typography>
-        <Typography>{get24HourChange()}</Typography>
+        <Typography
+          variant="caption"
+        >
+          24h Change
+        </Typography>
+        <Typography 
+          variant="caption" 
+          color={get24HourChangeColor()}
+          fontWeight={600}
+        >{get24HourChange() + ' ' + changePercentage()}</Typography>
       </Stack>
       <Stack>
-        <Typography>24h High</Typography>
-        <Typography>{get24HourHigh()}</Typography>
+      <Typography
+          variant="caption"
+        >
+          24h High
+        </Typography>
+        <Typography 
+          variant="caption" 
+          color='text.primary'
+          fontWeight={600}
+        >{get24HourHigh()}</Typography>
       </Stack>
       <Stack>
-        <Typography>24h Low</Typography>
-        <Typography>{get24HourLow()}</Typography>
+      <Typography
+          variant="caption"
+        >
+          24h Low
+        </Typography>
+        <Typography 
+          variant="caption" 
+          color='text.primary'
+          fontWeight={600}
+        >{get24HourLow()}</Typography>
       </Stack>
       <Stack>
-        <Typography>24h VolumeATOM</Typography>
-        <Typography>{get24HourVolumeATOM()}</Typography>
+      <Typography
+          variant="caption"
+        >
+          {'24h Volume(' + getFirstPair() + ')'}
+        </Typography>
+        <Typography 
+          variant="caption" 
+          color='text.primary'
+          fontWeight={600}
+        >{get24HourVolumeATOM()}</Typography>
       </Stack>
       <Stack>
-        <Typography>24h VolumeBNB</Typography>
-        <Typography>{get24HourVolumeBNB()}</Typography>
+      <Typography
+          variant="caption"
+        >
+          {'24h Volume(' + getSecondPair() + ')'}
+        </Typography>
+        <Typography 
+          variant="caption" 
+          color='text.primary'
+          fontWeight={600}
+        >{get24HourVolumeBNB()}</Typography>
       </Stack>
     </Stack>
   );

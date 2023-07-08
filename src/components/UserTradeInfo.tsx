@@ -21,60 +21,23 @@ export default function UserTradeInfo () {
 
   return (
     <Box width={1}>
-      <Box>
+      <Box
+      
+      >
         <Tabs 
           value={value} 
           onChange={handleChange} 
           aria-label="basic tabs example"
-          indicatorColor="primary"
+          indicatorColor="secondary"
+          textColor="secondary"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Open Orders" {...a11yProps(0)} />
+          <Tab label="Order History" {...a11yProps(1)} />
+          <Tab label="Trade History" {...a11yProps(2)} />
+          <Tab label="Funds" {...a11yProps(3)} />
         </Tabs>
-      </Box>        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab label="Item One" {...a11yProps(0)} />
-            <Tab label="Item Two" {...a11yProps(1)} />
-            <Tab label="Item Three" {...a11yProps(2)} />
-          </Tabs>
+      </Box>
       <LogInOrSignUp/>
-      <Container
-      >
-        <Stack
-        direction='row'
-        height={300}
-        justifyContent='center'
-        alignItems='center'>
-          <Typography
-          sx={{
-            color: 'secondary.main'
-          }}
-          >
-            Log In
-          </Typography>
-          <Typography
-          sx={{
-            color: 'text.primary'
-          }}        
-          >
-            &nbsp;or&nbsp; 
-          </Typography>
-          <Typography
-          sx={{
-            color: 'secondary.main'
-          }} 
-          >
-            Register Now
-          </Typography>
-          <Typography
-          sx={{
-            color: 'text.primary'
-          }}        
-          >
-            &nbsp;to trade&nbsp;
-          </Typography>
-        </Stack>
-      </Container>
     </Box>
   );
 }

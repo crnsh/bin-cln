@@ -7,7 +7,7 @@ export default function TabPanel ({ value, index, children, ...other } : {
 }) {
 
   return (
-    <div
+    <Box
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -15,11 +15,9 @@ export default function TabPanel ({ value, index, children, ...other } : {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
+        children
       )}
-    </div>
+    </Box>
   );
 
 }

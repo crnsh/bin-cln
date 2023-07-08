@@ -25,6 +25,9 @@ declare module '@mui/material/styles' {
   }
 }
 
+
+
+
 export default function Home() {
 
   const {theme, colorMode} = useMode();
