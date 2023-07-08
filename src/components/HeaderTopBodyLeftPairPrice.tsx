@@ -8,6 +8,7 @@ export default function HeaderTopBodyLeftPairPrice () {
     <Stack
       direction='row'
       px='1rem'
+      flexWrap='wrap'
       color='text.primary'
       justifyContent='space-between'
       alignItems='center'
@@ -18,6 +19,10 @@ export default function HeaderTopBodyLeftPairPrice () {
       <Stack
         direction='row'
         spacing='1rem'
+        display={{
+          xs: 'none',
+          md: 'flex'
+        }}
       >
         <Link href=""
           variant="caption"

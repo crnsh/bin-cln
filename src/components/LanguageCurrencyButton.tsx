@@ -4,11 +4,12 @@ import LanguageIcon from '@mui/icons-material/Language';
 export default function LanguageCurrencyButton () {
   return (
     <IconButton
-      sx={{
-        textTransform: 'none',
-        color: 'text.primary'
-        
-      }}
+    sx={{
+      display: {
+        xs: 'none',
+        sm: 'block'
+      }
+    }}
     >
       <LanguageIcon/>
     </IconButton>

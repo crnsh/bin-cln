@@ -21,10 +21,12 @@ export default function MainTopBodyLeft () {
   return (
     <Stack
     direction='row'
+    height='100%'
     >
       <SpotOrderbook/>
       <Stack
         height='100%'
+        flexGrow={1}
       >
         <AdvancedRealTimeChart
           autosize

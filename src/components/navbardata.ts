@@ -1,6 +1,3 @@
-import { Link, Stack } from "@mui/material";
-import BinanceLogo from "./BinanceLogo";
-import NavBarMenu from "./NavBarMenu";
 import AppsIcon from '@mui/icons-material/Apps';
 
 interface MenuItem {
@@ -14,7 +11,7 @@ interface NavBarLeftData {
   menuItems: MenuItem[]
 }
 
-const navBarLeftData: NavBarLeftData[] = [
+export const navBarLeftData: NavBarLeftData[] = [
   {
     buttonLabel : <AppsIcon/>,
     menuItems: [{
@@ -182,33 +179,3 @@ const navBarLeftData: NavBarLeftData[] = [
     }]
   },
 ]
-
-export default function NavBarLeft () {
-  
-  // This is a stack of logo, and NavBarMenus
-
-  return(
-    <Stack
-      direction="row"
-      alignItems='center'
-      overflow='auto'
-    >
-      <Link href=""
-        height='auto'
-        sx={{
-          fill: ((theme) => (theme.palette.secondary.main))
-        }}
-      >
-        <BinanceLogo/>
-      </Link>
-      {navBarLeftData.map((element, index) => (
-        <NavBarMenu
-        menuItems={element.menuItems}
-        >
-          {element.buttonLabel}
-        </NavBarMenu>
-      ))}
-    </Stack>
-  );
-
-}

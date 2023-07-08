@@ -28,34 +28,44 @@ export default function OrderFormSpotColumn ({ first } : {
     return (
       <Box
       m='1rem'
+      flexGrow={1}
       >
         <Stack
         direction='row'
         >
-          <Typography variant="h3" color='secondary'>Avbl-</Typography>
-          <Typography variant="body1" color='text.primary'>{first ? getPairFirst() : getPairSecond()}</Typography>
+          <Typography variant="caption" color='text.secondary'>Avbl-</Typography>
+          <Typography variant="caption" color='text.primary'>{first ? getPairFirst() : getPairSecond()}</Typography>
         </Stack>
-        <CustomInputBox
-          leftTitle="Price"
-          rightTitle={getPairSecond()}
-          defaultValue={getPriceSecond()}
-        />
-        <CustomInputBox
-          leftTitle="Amount"
-          rightTitle={getPairFirst()}
-        />
-        <Slider
-          aria-label="Amount"
-          defaultValue={0}
-          disabled
-          step={5}
-          marks
-          min={0}
-          max={100}
-        />
-        <Button>
-          <LogInOrSignUp/>
-        </Button>
+        <Stack
+        spacing='1rem'
+        >
+          <CustomInputBox
+            leftTitle="Price"
+            rightTitle={getPairSecond()}
+            defaultValue={getPriceSecond()}
+          />
+          <CustomInputBox
+            leftTitle="Amount"
+            rightTitle={getPairFirst()}
+          />
+          <Slider
+            aria-label="Amount"
+            defaultValue={0}
+            disabled
+            step={1}
+            marks
+            min={1}
+            max={5}
+          />
+          <Button
+            sx={{
+              textTransform: 'none',
+              bgcolor: 'primary.light'
+            }}
+          >
+            <LogInOrSignUp/>
+          </Button>
+        </Stack>
       </Box>
     )
 }

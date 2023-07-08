@@ -1,5 +1,6 @@
 import { Stack } from "@mui/material";
 import DownloadsButton from "./DownloadsButton";
+import Hamburger from "./Hamburger";
 import HelpMenuButton from "./HelpMenuButton";
 import LanguageCurrencyButton from "./LanguageCurrencyButton";
 import LoginButton from "./LoginButton";
@@ -17,6 +18,7 @@ export default function NavBarRight () {
     >
       <LoginButton/>
       <RegisterButton/>
+      <Hamburger/>
       <NotificationsButton/>
       <DownloadsButton/>
       <LanguageCurrencyButton/>

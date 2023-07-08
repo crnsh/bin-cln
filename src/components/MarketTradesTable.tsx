@@ -10,16 +10,15 @@ export default function MarketTradesTable () {
     <TableContainer component={Paper}
       sx={{
         px: 0,
-        height: "400px"
-        
+        maxHeight: 400
       }}
     >
       <Table size='small' stickyHeader>
         <TableHead>
           <TableRow>
-            <TableCell>Price(BNB)</TableCell>
-            <TableCell align='right'>Amount(ATOM)</TableCell>
-            <TableCell align='right'>Time</TableCell>
+            <TableCell sx = {{py: '0.7rem', px: '0.3rem', fontSize: 12}} >Price(BNB)</TableCell>
+            <TableCell sx = {{py: '0.7rem', px: '0.3rem', fontSize: 12}} align='right'>Amount(ATOM)</TableCell>
+            <TableCell sx = {{py: '0.7rem', px: '0.3rem', fontSize: 12}} align='right'>Time</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -29,13 +28,14 @@ export default function MarketTradesTable () {
             >
               <TableCell
                 sx={{
-                  color: ((row.color === 'green') ? 'success.main' : 'error.main')
+                  color: ((row.color === 'green') ? 'success.main' : 'error.main'),
+                  py: 0, px: '0.3rem', fontSize: 12
                 }}
               >
                 {row.price}
               </TableCell>
-              <TableCell align='right'>{row.amount}</TableCell>
-              <TableCell align='right'>{row.time}</TableCell>
+              <TableCell sx = {{py: 0, px: '0.3rem', fontSize: 12}} align='right'>{row.amount}</TableCell>
+              <TableCell sx = {{py: 0, px: '0.3rem', fontSize: 12}} align='right'>{row.time}</TableCell>
             </TableRow>
           ))}
         </TableBody>

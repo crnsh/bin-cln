@@ -28,15 +28,19 @@ export default function SpotOrderbook () {
       direction='row'
       >
         <Box>
-          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab label={<SplitOrderbookIcon/>} {...a11yProps(0)} />
-            <Tab label={<GreenOrderbookIcon/>} {...a11yProps(1)} />
-            <Tab label={<RedOrderbookIcon/>} {...a11yProps(2)} />
+          <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
+            sx={{
+              ml: 1
+            }}
+          >
+            <Tab sx={{ p: 0, minWidth: 0 }} label={<SplitOrderbookIcon/>} {...a11yProps(0)}/>
+            <Tab sx={{ p: 0, minWidth: 0 }} label={<GreenOrderbookIcon/>} {...a11yProps(1)} />
+            <Tab sx={{ p: 0, minWidth: 0 }} label={<RedOrderbookIcon/>} {...a11yProps(2)} />
           </Tabs>  
         </Box>
       </Stack>
       <TabPanel value={value} index={0}>
-        <Stack>
+        <Stack height='100%'>
           <OrderbookTableFull data={dataRed}/>      
           <OrderbookTicker price={price} currencyValue={currencyValue}/>
           <OrderbookTableHeaderless data={dataGreen}/>
@@ -44,14 +48,14 @@ export default function SpotOrderbook () {
       </TabPanel>
       <TabPanel value={value} index={1}> 
       {/* Green one */}
-        <Stack>
+        <Stack height='100%'>
           <OrderbookTableFull data={dataGreen}/>      
           <OrderbookTicker price={price} currencyValue={currencyValue}/>
         </Stack>
       </TabPanel>
       {/* Red one */}
       <TabPanel value={value} index={2}>
-        <Stack>
+        <Stack height='100%'>
           <OrderbookTableFull data={dataRed}/>      
           <OrderbookTicker price={price} currencyValue={currencyValue}/>
         </Stack>

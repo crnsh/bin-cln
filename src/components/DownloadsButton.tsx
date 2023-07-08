@@ -5,9 +5,10 @@ export default function DownloadsButton () {
   return (
     <IconButton
       sx={{
-        textTransform: 'none',
-        color: 'text.primary'
-        
+        display: {
+          xs: 'none',
+          md: 'block'
+        }
       }}
     >
       <DownloadForOfflineIcon/>

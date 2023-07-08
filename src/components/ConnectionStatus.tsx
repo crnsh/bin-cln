@@ -12,12 +12,12 @@ export default function ConnectionStatus ({ connectionStatus } : {
   if (connectionStatus === "STABLE") {
     ConnectionIcon = <svg className="fill-success_main" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="9.667" width="1.67" height="2.5" fill="#0ECB81"></rect><rect x="4.44446" y="5.667" width="1.66667" height="6.67" fill="#0ECB81"></rect><rect x="8.88892" y="3" width="1.66667" height="10.83" fill="#0ECB81"></rect><rect x="13.3333" width="1.66667" height="15" fill="#0ECB81"></rect></svg>;
     ConnectionText = "Stable Connection"
-    ConnectionColor = "success"
+    ConnectionColor = "success.main"
   }
   else if (connectionStatus === "UNSTABLE") {
     ConnectionIcon = <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="9.667" width="1.67" height="2.5" fill="#0ECB81"></rect><rect x="4.44446" y="5.667" width="1.66667" height="6.67" fill="#0ECB81"></rect><rect x="8.88892" y="3" width="1.66667" height="10.83" fill="#0ECB81"></rect><rect x="13.3333" width="1.66667" height="15" fill="#848E9C"></rect></svg>
     ConnectionText = "Unstable Connection"
-    ConnectionColor = "success"
+    ConnectionColor = "success.main"
   }
   else if (connectionStatus === "CONNECTING") {
     ConnectionIcon = <svg className="fill-secondary_main" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="9.667" width="1.67" height="2.5" fill="#F0B90B"></rect><rect x="4.44446" y="5.667" width="1.66667" height="6.67" fill="#F0B90B"></rect><rect x="8.88892" y="3" width="1.66667" height="10.83" fill="#F0B90B"></rect><rect x="13.3333" width="1.66667" height="15" fill="#848E9C"></rect></svg>

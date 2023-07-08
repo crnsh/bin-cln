@@ -1,15 +1,14 @@
 'use client'
 
-import * as React from 'react';
-import { PaletteMode, CssBaseline, ThemeProvider, createTheme, 
-  TypeText, PaletteColor, PaletteColorOptions, PaletteOptions 
-} from "@mui/material";
-
-import { ColorModeContext, useMode } from './theme';
-
-import Mobile from "@/components/views/Mobile";
 import Desktop from "@/components/views/Desktop";
+import Mobile from "@/components/views/Mobile";
 import Tablet from "@/components/views/Tablet";
+import { PaletteColor, PaletteColorOptions } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import ThemeProvider from "@mui/material/styles/ThemeProvider";
+import { ColorModeContext, useMode } from "./theme";
+
+
 
 declare module '@mui/material/styles' {
   interface TypeText {
@@ -36,11 +35,7 @@ export default function Home() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-          <main>
-            <Mobile/>
-            <Tablet/>
-            <Desktop/>
-          </main>
+          <Desktop/>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

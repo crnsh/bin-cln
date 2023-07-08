@@ -14,7 +14,10 @@ export default function MainBody () {
       borderRight: 1,
       borderColor: 'divider',
       zIndex: 5,
-      overflow: 'auto'
+      display: {
+        xs: 'none',
+        md: 'block'
+      }
     }}
     >
       <TopBody/>

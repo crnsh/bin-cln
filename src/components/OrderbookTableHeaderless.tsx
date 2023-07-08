@@ -15,8 +15,15 @@ export default function OrderbookTableHeaderless () {
   //          Rows with data
 
   return (
-    <TableContainer component={Paper}>
-      <Table size='small'>
+    <TableContainer component={Paper}
+      sx={{
+        maxHeight: {
+          xs: 150,
+          md: 'none'
+        },
+      }}
+    >
+      <Table size='small' stickyHeader>
         <TableBody>
           {sampleData.map((row) => (
             <TableRow
@@ -24,13 +31,28 @@ export default function OrderbookTableHeaderless () {
             >
               <TableCell
                 sx={{
-                  color: ((row.green === true) ? 'success.main' : 'error.main')
+                  color: ((row.green === true) ? 'success.main' : 'error.main'),
+                  py: 0,
+                  px: '0.3rem',
+                  fontSize: 12
                 }}
               >
                 {row.price}
               </TableCell>
-              <TableCell align='right'>{row.amount}</TableCell>
-              <TableCell align='right'>{row.time}</TableCell>
+              <TableCell align='right'
+                sx={{
+                  py: 0,
+                  px: '0.3rem',
+                  fontSize: 12
+                }}
+              >{row.amount}</TableCell>
+              <TableCell align='right'
+                sx={{
+                  py: 0,
+                  px: '0.3rem',
+                  fontSize: 12
+                }}
+              >{row.time}</TableCell>
             </TableRow>
           ))}
         </TableBody>

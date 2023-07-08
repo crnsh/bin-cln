@@ -17,13 +17,45 @@ export default function OrderbookTableFull ({ data } : {
   //          Rows with data
 
   return (
-    <TableContainer component={Paper}>
-      <Table size="small">
+    <TableContainer component={Paper}
+    sx={{
+      maxHeight: {
+        xs: 150,
+        md: 'none'
+      },
+    }}
+    >
+      <Table size="small" stickyHeader>
         <TableHead>
-          <TableRow>
-            <TableCell>Price(BNB)</TableCell>
-            <TableCell align='right'>Amount(ATOM)</TableCell>
-            <TableCell align='right'>Total</TableCell>
+          <TableRow
+          >
+            <TableCell
+            sx={{
+              py: 0,
+              px: '0.3rem',
+              fontSize: 12
+            }}
+            >
+              Price(BNB)
+            </TableCell>
+            <TableCell align='right'
+            sx={{
+              py: 0,
+              px: '0.3rem',
+              fontSize: 12
+            }}
+            >
+              Amount(ATOM)
+            </TableCell>
+            <TableCell align='right'
+            sx={{
+              py: 0,
+              px: '0.3rem',
+              fontSize: 12
+            }}
+            >
+              Total
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -33,13 +65,28 @@ export default function OrderbookTableFull ({ data } : {
             >
               <TableCell
                 sx={{
-                  color: ((row.color === 'green') ? 'success.main' : 'error.main')
+                  color: ((row.color === 'green') ? 'success.main' : 'error.main'),
+                  py: 0,
+                  px: '0.3rem',
+                  fontSize: 12
                 }}
               >
                 {row.price}
               </TableCell>
-              <TableCell align='right'>{row.amount}</TableCell>
-              <TableCell align='right'>{row.total}</TableCell>
+              <TableCell align='right' 
+                sx={{
+                  py: 0,
+                  px: '0.3rem',
+                  fontSize: 12
+                }}
+              >{row.amount}</TableCell>
+              <TableCell align='right'
+                sx={{
+                  py: 0,
+                  px: '0.3rem',
+                  fontSize: 12
+                }}
+              >{row.total}</TableCell>
             </TableRow>
           ))}
         </TableBody>

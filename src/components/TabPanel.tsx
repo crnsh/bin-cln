@@ -9,6 +9,7 @@ export default function TabPanel ({ value, index, children, ...other } : {
   return (
     <Box
       role="tabpanel"
+      width="100%"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}

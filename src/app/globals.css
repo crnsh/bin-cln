@@ -2,6 +2,14 @@
 /* @tailwind components;
 @tailwind utilities; */
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%
+}
+
 :root {
   --color-logo_main : #F0B90B;
   --color-primary_main : rgb(22, 26, 30);

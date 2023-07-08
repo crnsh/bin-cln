@@ -20,7 +20,9 @@ export default function UserTradeInfo () {
   // create a tab list with each entry pointing to nothing
 
   return (
-    <Box width={1}>
+    <Box
+      height="100%"
+    >
       <Box
       
       >
@@ -37,7 +39,14 @@ export default function UserTradeInfo () {
           <Tab label="Funds" {...a11yProps(3)} />
         </Tabs>
       </Box>
-      <LogInOrSignUp/>
+      <Box
+      height="5vh"
+      alignItems='center'
+      display='flex'
+      justifyContent='center'
+      >
+        <LogInOrSignUp/>
+      </Box>
     </Box>
   );
 }

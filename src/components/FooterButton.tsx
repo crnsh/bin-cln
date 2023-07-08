@@ -26,8 +26,6 @@ export default function FooterButton ({
       justifyContent='end'
       alignItems='center'
       px='0.3rem'
-      borderRight={1}
-      borderColor='divider'
       sx={{
         textTransform: 'none'
       }}

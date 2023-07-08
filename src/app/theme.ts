@@ -1,5 +1,6 @@
-import { createTheme, PaletteMode } from "@mui/material";
+import { PaletteMode, createTheme } from "@mui/material";
 import { createContext, useState, useMemo } from "react";
+
 
 export const themeSettings = (mode: PaletteMode) => ({
   palette: {

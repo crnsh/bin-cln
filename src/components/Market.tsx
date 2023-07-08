@@ -15,9 +15,9 @@ export default function Market () {
   ]
 
   const columns: GridColDef[] = [
-    {field: 'pair', headerName: 'Pair'},
-    {field: 'price', headerName: 'Price'},
-    {field: 'change', headerName: 'Change'},
+    {field: 'pair', headerName: 'Pair', flex: 1},
+    {field: 'price', headerName: 'Price', flex: 1},
+    {field: 'change', headerName: 'Change', flex: 1},
   ]
   
   return (
@@ -26,7 +26,18 @@ export default function Market () {
       pb="1rem"
       borderColor="divider"
     >
-      <DataGrid density="compact" rows={rows} columns={columns}/>
+      <DataGrid density="compact" rows={rows} columns={columns}
+        
+        sx={{
+          "& .MuiDataGrid-columnHeaders": {
+            fontSize: 12,
+
+          },
+          "& .MuiDataGrid-cell": {
+            fontSize: 12,
+          },
+        }}
+      />
     </Box>
   )
 }

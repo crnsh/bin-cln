@@ -7,7 +7,11 @@ export default function LoginButton () {
     sx={{
       textTransform: 'none',
       color: 'text.primary',
-      fontWeight: "600"
+      fontWeight: "600",
+      display: {
+        xs: 'none',
+        md: 'block'
+      }
     }}
     >
       Login

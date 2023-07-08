@@ -5,7 +5,14 @@ import NotificationsMenu from "./NotificationsMenu";
 export default function NotificationsButton () {
   return (
     <div>
-      <IconButton>
+      <IconButton
+      sx={{
+        display: {
+          xs: 'none',
+          sm: 'block'
+        }
+      }}
+      >
         <NotificationsActiveIcon/>
       </IconButton>
       {/* <Menu

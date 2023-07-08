@@ -4,11 +4,12 @@ import HelpCenterIcon from '@mui/icons-material/HelpCenter';
 export default function HelpMenuButton () {
   return (
     <IconButton
-      sx={{
-        textTransform: 'none',
-        color: 'text.primary'
-        
-      }}
+    sx={{
+      display: {
+        xs: 'none',
+        sm: 'block'
+      }
+    }}
     >
       <HelpCenterIcon/>
     </IconButton>

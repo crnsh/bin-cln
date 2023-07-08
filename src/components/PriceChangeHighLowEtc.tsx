@@ -54,6 +54,7 @@ export default function PriceChangeHighLowEtc () {
     <Stack 
       direction='row'
       spacing='1rem'
+      flexWrap='wrap'
       alignItems='center'
     >
       <Stack>

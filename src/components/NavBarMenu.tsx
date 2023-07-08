@@ -1,4 +1,4 @@
-import { Menu, Button, Container } from "@mui/material"
+import { Menu, Button, Container, Box } from "@mui/material"
 import NavBarMenuItem from "./NavBarMenuItem";
 import React from "react";
 
@@ -27,7 +27,13 @@ export default function NavBarMenu ({ children, menuItems } : {
   // hovered over
 
   return (
-    <div>
+    <Box
+      sx={{
+        display : {
+          xs: 'none', md: 'block'
+        }
+      }}
+    >
       <Button
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
@@ -66,7 +72,7 @@ export default function NavBarMenu ({ children, menuItems } : {
        ))} 
       </Container>
       </Menu>
-    </div>
+    </Box>
   );
 
 }
