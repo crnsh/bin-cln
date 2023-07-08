@@ -2,6 +2,22 @@ import { Stack, Box, Typography, Button, Slider } from "@mui/material";
 import LogInOrSignUp from "./LogInOrSignUp";
 import CustomInputBox from "./tradingview/components/CustomInputBox";
 
+function getPairSecond() {
+  return 'BNB';
+}
+
+function getPriceSecond() {
+  return 100;
+}
+
+function getPairFirst() {
+  return 'USDT';
+}
+
+function getPriceFirst() {
+  return 200;
+}
+
 export default function OrderFormSpot () {
   return (
     <Stack
@@ -21,7 +37,7 @@ export default function OrderFormSpot () {
         />
         <CustomInputBox
           leftTitle="Amount"
-          rightTitle={getPriceFirst()}
+          rightTitle={getPairFirst()}
         />
         <Slider
           aria-label="Amount"

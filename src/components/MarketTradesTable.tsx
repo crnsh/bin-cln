@@ -8,7 +8,7 @@ export default function MarketTradesTable () {
 
   return (
     <TableContainer component={Paper}>
-      <Table>
+      <Table size='small'>
         <TableHead>
           <TableRow>
             <TableCell>Price(BNB)</TableCell>
@@ -52,19 +52,19 @@ function createData(
 }
 
 const sampleData = [
-  createData(1, false, 0.03899, 13.26, "19:38:44"),
-  createData(2, true, 0.03899, 13.26, "19:38:44"),
-  createData(3, false, 0.03839, 13.26, "19:38:44"),
-  createData(4, false, 0.03899, 13.21, "19:38:44"),
-  createData(5, true, 0.038956, 13.25, "19:38:44"),
-  createData(6, false, 0.03899, 13.27, "19:38:44"),
-  createData(7, true, 0.03829, 13.24, "19:38:44"),
-  createData(8, true, 0.0381299, 13.26, "19:38:44"),
-  createData(9, false, 0.03899, 14.26, "19:38:44"),
-  createData(10, true, 0.03349, 13.26, "19:38:44"),
-  createData(11, true, 0.07899, 15.26, "19:38:44"),
-  createData(12, true, 0.034599, 13.26, "19:38:44"),
-  createData(13, true, 0.03899, 13.26, "19:38:44"),
-  createData(14, false, 0.03899, 13.26, "19:38:44"),
-  createData(15, false, 0.03899, 13.26, "19:38:44"),
+  createData(1, 'red', 0.03899, 13.26, "19:38:44"),
+  createData(2, 'green', 0.03899, 13.26, "19:38:44"),
+  createData(3, 'red', 0.03839, 13.26, "19:38:44"),
+  createData(4, 'red', 0.03899, 13.21, "19:38:44"),
+  createData(5, 'green', 0.038956, 13.25, "19:38:44"),
+  createData(6, 'red', 0.03899, 13.27, "19:38:44"),
+  createData(7, 'green', 0.03829, 13.24, "19:38:44"),
+  createData(8, 'green', 0.0381299, 13.26, "19:38:44"),
+  createData(9, 'red', 0.03899, 14.26, "19:38:44"),
+  createData(10, 'green', 0.03349, 13.26, "19:38:44"),
+  createData(11, 'green', 0.07899, 15.26, "19:38:44"),
+  createData(12, 'green', 0.034599, 13.26, "19:38:44"),
+  createData(13, 'green', 0.03899, 13.26, "19:38:44"),
+  createData(14, 'red', 0.03899, 13.26, "19:38:44"),
+  createData(15, 'red', 0.03899, 13.26, "19:38:44"),
 ]

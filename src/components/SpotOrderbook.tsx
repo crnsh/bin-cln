@@ -60,11 +60,28 @@ export default function SpotOrderbook () {
   );
 }
 
-function getSampleData() {
+const dataRed = [
+  {id : 1, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 2, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 3, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 4, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 5, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 6, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 7, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 8, color: 'red', price : 0.123, amount : 412, total : 100},
+];
 
-  let dataRed = 
+const dataGreen = [
+  {id : 1, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 2, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 3, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 4, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 5, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 6, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 7, color: 'red', price : 0.123, amount : 412, total : 100},
+  {id : 8, color: 'red', price : 0.123, amount : 412, total : 100},
+];
 
-  return {dataRed, dataGreen, currencyValue, price}
-}
+const currencyValue = 0.03980;
 
-let {dataRed, dataGreen, currencyValue, price} = getSampleData();
+const price = 412;

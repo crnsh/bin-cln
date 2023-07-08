@@ -4,12 +4,12 @@ import { DataGrid, GridColDef, GridRowsProp } from "@mui/x-data-grid";
 export default function Market () {
   
   const rows: GridRowsProp = [
-    { pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
-    { pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
+    { id : 1, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
+    { id : 2, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
+    { id : 3, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
+    { id : 4, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
+    { id : 5, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
+    { id : 6, pair: 'BNB/BTC', price: 0.0003, change: '-0.71%'},
   ]
 
   const columns: GridColDef[] = [

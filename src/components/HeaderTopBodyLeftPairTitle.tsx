@@ -1,4 +1,15 @@
-import { Stack } from "@mui/material";
+import { Link, Stack, Typography } from "@mui/material";
+import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
+
+function getFirstPair() {
+  // some database call or checking params
+  return "BTC"
+}
+
+function getSecondPair() {
+  // some database call or checking params
+  return "USDT"
+}
 
 export default function HeaderTopBodyLeftPairTitle () {
 
@@ -12,7 +23,7 @@ export default function HeaderTopBodyLeftPairTitle () {
           <Stack
             direction='row'
             >
-            <BookIcon/>
+            <CollectionsBookmarkIcon/>
             <Typography>
               Cosmos Price
             </Typography>

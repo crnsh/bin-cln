@@ -1,5 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import PriceChangeHighLowEtc from "./PriceChangeHighLowEtc";
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 
 export default function HeaderTopBodyLeftPairPrice () {
   return (
@@ -11,11 +13,11 @@ export default function HeaderTopBodyLeftPairPrice () {
       direction='row'
       >
         <a href="">
-          <PlayIcon/>
+          <PlayCircleIcon/>
           <Typography>Spot Tutorial</Typography>
         </a>
         <a href="">
-          <CalculatorIcon/>
+          <OndemandVideoIcon/>
           <Typography>Spot Guidance</Typography>
         </a>
       </Stack>

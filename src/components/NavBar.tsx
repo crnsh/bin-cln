@@ -9,7 +9,10 @@ export default function NavBar () {
   // Left Nav Bar and Right Nav Bar
 
   return (
-    <AppBar>
+    <AppBar 
+      position="static"
+      color='secondary'
+    >
       <Toolbar
       sx={{
         width: 1

@@ -1,4 +1,5 @@
 import { Box, Tab, Tabs } from "@mui/material";
+import React from "react";
 import { useState } from "react";
 import MarketMoverRow from "./MarketMoverRow";
 import TabPanel from "./TabPanel";
@@ -10,9 +11,61 @@ function a11yProps(index: number) {
   };
 }
 
+function getNewData(value: number) {
+  if (value === 0) {
+    return ([{
+      pairFirst : 'BNB', 
+      pairSecond : 'USDT', 
+      time : '10:12:48', 
+      changeText: 'BigBuy', 
+      changeColor: "green",
+      changeIcon: null,
+      pairLink: ""
+    }, {
+      pairFirst : 'BONK', 
+      pairSecond : 'USDT', 
+      time : '10:12:49', 
+      changeText: 'BigBuy', 
+      changeColor: "red",
+      changeIcon: null,
+      pairLink: ""      
+    }])
+  }
+  else {
+    return ([{
+      pairFirst : 'WOW', 
+      pairSecond : 'USDT', 
+      time : '10:12:48', 
+      changeText: 'Nice Try', 
+      changeColor: "green",
+      changeIcon: null,
+      pairLink: ""
+    }, {
+      pairFirst : 'BONK', 
+      pairSecond : 'USDT', 
+      time : '10:12:49', 
+      changeText: 'BigBuy', 
+      changeColor: "green",
+      changeIcon: null,
+      pairLink: ""      
+    }])
+  }
+}
+
+interface MarketActivityRow {
+  pairFirst : string,
+  pairSecond : string,
+  time : string,
+  changeText: string ,
+  changeColor: string,
+  changeIcon: React.ReactNode,
+  pairLink: string
+}
+
 export default function MarketActivityTabs () {
 
-  const [data, setData] = useState(null);
+  const [value, setValue] = React.useState(0);
+  const [data, setData] = useState<MarketActivityRow[]>([]);
 
   // data is a state that is supposed to changed upon the value of "value" changing
 
