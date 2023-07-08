@@ -3,7 +3,7 @@ This is my attempt at creating a Binance clone. Storybook was malfunctioning wit
 There are still quite a lot of issues with this and much to be worked on. 
 
 - Total time spent on this particular project (since assigned) - 20 hours
-- Total time spent learning React, Typescript, NextJS, Tailwind, MUI, etc. (since assigned) - 90-100 hours
+- Total time spent learning React, Typescript, NextJS, Tailwind, MUI, etc. (since assigned) - 100+ hours
 
 I could have been more efficient and done this under 10 hours, but honestly am not at the level to complete something like this under 6 hours. Maybe a few more weeks of practice will allow me to make something like this under 4 hours.
 
