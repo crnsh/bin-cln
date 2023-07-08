@@ -1,5 +1,7 @@
 This is my attempt at creating a Binance clone. Storybook was malfunctioning with module aliases, so I've created a single storybook without using module aliases. Make sure you have npm version `9.5.0`.
 
+**Note** The trading view widget takes a few refreshes before turning on.
+
 There are still quite a lot of issues with this and much to be worked on. 
 
 - Total time spent on this particular project (since assigned) - 20 hours
