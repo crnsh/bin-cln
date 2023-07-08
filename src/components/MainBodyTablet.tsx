@@ -36,10 +36,9 @@ export default function MainBodyTablet () {
       direction='row'>
         <Stack>
           <Box
-            height='500px'
+            height='800px'
           >
             <AdvancedRealTimeChart
-              height='500px'
               autosize
               theme={getTheme()}
             />

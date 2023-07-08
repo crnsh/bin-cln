@@ -7,7 +7,10 @@ export default function OrderFormSpot () {
   return (
     <Stack
     direction='row'
-    flexWrap='wrap'
+    flexWrap={{
+      xs: 'wrap',
+      md: 'nowrap'
+    }}
     
     >
       <OrderFormSpotColumn first={false}/>
