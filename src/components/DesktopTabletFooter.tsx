@@ -75,7 +75,7 @@ export default function Footer ({ connectionStatus } : {
         width={1}
         direction='row'
         justifyContent='space-between'
-        overflow='auto'
+        overflow='overlay'
         className="flex flex-row justify-between bg-primary_main overflow-auto fixed bottom-0 left-0 right-0 border-t border-divider"
         >
         <ConnectionStatus

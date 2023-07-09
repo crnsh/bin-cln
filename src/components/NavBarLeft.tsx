@@ -205,7 +205,7 @@ export default function NavBarLeft () {
     <Stack
       direction="row"
       alignItems='center'
-      overflow='auto'
+      overflow='overlay'
     >
       <Link href=""
         height='auto'

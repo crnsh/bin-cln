@@ -53,7 +53,7 @@ export default function MobileFooter () {
         width={1}
         direction='row'
         justifyContent='space-between'
-        overflow='auto'
+        overflow='overlay'
         >
           {footerObjects.map((element) => (
             <FooterButton key={element.title}
