@@ -1,4 +1,4 @@
-import { Stack, useTheme } from "@mui/material";
+import { Box, Stack, useTheme } from "@mui/material";
 import OrderForm from "./OrderForm";
 import SpotOrderbook from "./SpotOrderbook";
 import { AdvancedRealTimeChart } from "./tradingview/components";
@@ -28,10 +28,14 @@ export default function MainTopBodyLeft () {
         height='100%'
         flexGrow={1}
       >
-        <AdvancedRealTimeChart
-          autosize
-          theme={useGetTheme()}
-        />
+        <Box
+          height='400px'
+        >
+          <AdvancedRealTimeChart
+            autosize
+            theme={useGetTheme()}
+          />
+        </Box>
         <OrderForm/>
       </Stack>
     </Stack>
