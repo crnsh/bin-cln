@@ -1,8 +1,6 @@
 'use client'
 
 import Desktop from "@/components/views/Desktop";
-import Mobile from "@/components/views/Mobile";
-import Tablet from "@/components/views/Tablet";
 import { PaletteColor, PaletteColorOptions } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";

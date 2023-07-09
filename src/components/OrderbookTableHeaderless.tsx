@@ -8,7 +8,9 @@ interface OrderbookRow {
   total : number
 }
 
-export default function OrderbookTableHeaderless () {
+export default function OrderbookTableHeaderless ({ data }: {
+  data : OrderbookRow[]
+}) {
 
   // - Tab1 - Title : Market Trades
   //          Content - Table with columns (Price(BNB), Amount(ATOM), Time)

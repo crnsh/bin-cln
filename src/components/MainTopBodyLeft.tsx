@@ -4,7 +4,7 @@ import SpotOrderbook from "./SpotOrderbook";
 import { AdvancedRealTimeChart } from "./tradingview/components";
 import { useMode } from "@/app/theme";
 
-function getTheme() {
+function useGetTheme() {
   const theme = useTheme();
    if (theme.palette.primary.main === 'rgb(250, 250, 250)') {
     return 'light';
@@ -30,7 +30,7 @@ export default function MainTopBodyLeft () {
       >
         <AdvancedRealTimeChart
           autosize
-          theme={getTheme()}
+          theme={useGetTheme()}
         />
         <OrderForm/>
       </Stack>

@@ -7,7 +7,7 @@ import Trades from "./Trades";
 import { AdvancedRealTimeChart } from "./tradingview/components";
 import UserTradeInfo from "./UserTradeInfo";
 
-function getTheme() {
+function useGetTheme() {
   const theme = useTheme();
    if (theme.palette.primary.main === 'rgb(250, 250, 250)') {
     return 'light';
@@ -40,7 +40,7 @@ export default function MainBodyTablet () {
           >
             <AdvancedRealTimeChart
               autosize
-              theme={getTheme()}
+              theme={useGetTheme()}
             />
           </Box>
           <Stack

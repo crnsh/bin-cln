@@ -2,7 +2,7 @@ import { Link, Stack, Typography } from "@mui/material";
 
 export default function OrderbookTicker ({ price, currencyValue } : {
   price : number,
-  currencyValue : string
+  currencyValue : number
 }) {
   return (
     <Stack

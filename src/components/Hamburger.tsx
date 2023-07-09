@@ -201,24 +201,26 @@ export default function Hamburger () {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {navBarData.map((element, index) => (
-          <>
-            <ListItemButton onClick={handleClick(element.buttonLabel)}>
-              <ListItemText primary={element.buttonLabel} />
-              {hamburgerState[element.buttonLabel] ? <ExpandLess /> : <ExpandMore />}
+        {navBarData.map((bigElement, index) => (
+          <ListItem key={bigElement.buttonLabel}>
+            <ListItemButton onClick={handleClick(bigElement.buttonLabel)}>
+              <ListItemText primary={bigElement.buttonLabel} />
+              {hamburgerState[bigElement.buttonLabel] ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <Collapse in={hamburgerState[element.buttonLabel]} timeout="auto" unmountOnExit>
+            <Collapse in={hamburgerState[bigElement.buttonLabel]} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 {
-                  element.menuItems.map((element, index) => (
-                  <ListItemButton sx={{ pl: 4 }} onClick={() => {}}>
-                    <ListItemText primary={element.title} />
-                  </ListItemButton>
+                  bigElement.menuItems.map((element, index) => (
+                  <ListItem key={bigElement.buttonLabel + '-' + element.title}>
+                    <ListItemButton sx={{ pl: 4 }} onClick={() => {}}>
+                      <ListItemText primary={element.title} />
+                    </ListItemButton>
+                  </ListItem>
                   ))
                 }
               </List>
             </Collapse>
-            </>
+          </ListItem>
         ))}
       </List>
     </Box>

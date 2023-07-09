@@ -56,7 +56,7 @@ export default function MobileFooter () {
         overflow='auto'
         >
           {footerObjects.map((element) => (
-            <FooterButton
+            <FooterButton key={element.title}
             displayText={element.title}
             onClickFn={() => (null)}
             onHoverFn={() => (null)}

@@ -183,6 +183,20 @@ const navBarLeftData: NavBarLeftData[] = [
   },
 ]
 
+function getRandomString() {
+  let length = 10;
+
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+
 export default function NavBarLeft () {
   
   // This is a stack of logo, and NavBarMenus
@@ -202,7 +216,7 @@ export default function NavBarLeft () {
         <BinanceLogo/>
       </Link>
       {navBarLeftData.map((element, index) => (
-        <NavBarMenu
+        <NavBarMenu key={typeof element.buttonLabel === 'string' ? element.buttonLabel : getRandomString()}
         menuItems={element.menuItems}
         >
           {element.buttonLabel}

@@ -4,6 +4,18 @@ import { useState } from "react";
 import MarketMoverRow from "./MarketMoverRow";
 import TabPanel from "./TabPanel";
 
+interface MarketActivityRow {
+  pairFirst : string,
+  pairSecond : string,
+  time : string,
+  changeText: string ,
+  changeDesc: string,
+  changeColor: 'green' | 'red',
+  changeIcon: React.ReactNode,
+  pairLink: string,
+  link: string
+}
+
 function a11yProps(index: number) {
   return {
     id: `simple-tab-${index}`,
@@ -11,56 +23,55 @@ function a11yProps(index: number) {
   };
 }
 
-function getNewData(value: number) {
+function getNewData(value: number): MarketActivityRow[] {
   if (value === 0) {
     return ([{
       pairFirst : 'BNB', 
       pairSecond : 'USDT', 
       time : '10:12:48', 
       changeText: 'BigBuy', 
+      changeDesc: 'Description', 
       changeColor: "green",
       changeIcon: null,
-      pairLink: ""
+      pairLink: "",
+      link: 'test.com'
     }, {
-      pairFirst : 'BONK', 
+      pairFirst : 'BNB', 
       pairSecond : 'USDT', 
-      time : '10:12:49', 
+      time : '10:12:50', 
       changeText: 'BigBuy', 
-      changeColor: "red",
+      changeDesc: 'Description 2', 
+      changeColor: "green",
       changeIcon: null,
-      pairLink: ""      
+      pairLink: "",
+      link: 'test.com'
     }])
   }
   else {
     return ([{
-      pairFirst : 'WOW', 
+      pairFirst : 'BNB', 
       pairSecond : 'USDT', 
-      time : '10:12:48', 
-      changeText: 'Nice Try', 
-      changeColor: "green",
-      changeIcon: null,
-      pairLink: ""
-    }, {
-      pairFirst : 'BONK', 
-      pairSecond : 'USDT', 
-      time : '10:12:49', 
+      time : '10:16:58', 
       changeText: 'BigBuy', 
+      changeDesc: 'Description 3 ', 
       changeColor: "green",
       changeIcon: null,
-      pairLink: ""      
+      pairLink: "",
+      link: 'test.com'
+    }, {
+      pairFirst : 'BNB', 
+      pairSecond : 'USDT', 
+      time : '10:14:18', 
+      changeText: 'BigBuy', 
+      changeDesc: 'Description 5', 
+      changeColor: "red",
+      changeIcon: null,
+      pairLink: "",
+      link: 'test.com'
     }])
   }
 }
 
-interface MarketActivityRow {
-  pairFirst : string,
-  pairSecond : string,
-  time : string,
-  changeText: string ,
-  changeColor: string,
-  changeIcon: React.ReactNode,
-  pairLink: string
-}
 
 export default function MarketActivityTabs () {
 
@@ -99,7 +110,7 @@ export default function MarketActivityTabs () {
       }}
       >
         {data.map((e) => (
-          <MarketMoverRow 
+          <MarketMoverRow key={e.time}
             pairFirst={e.pairFirst}
             pairSecond={e.pairSecond}
             time={e.time}

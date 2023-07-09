@@ -6,7 +6,7 @@ interface MenuItem {
   svgElement : React.ReactNode,
   title : string,
   description : string,
-  onclick: () => void
+  onClick?: () => void
 }
 
 export default function NavBarMenu ({ children, menuItems } : {
@@ -63,11 +63,11 @@ export default function NavBarMenu ({ children, menuItems } : {
         }}
       >
        {menuItems.map((element) => (
-        <NavBarMenuItem
+        <NavBarMenuItem key={element.title}
           svgElement={element.svgElement}
           title={element.title}
           description={element.description}
-          onClose={handleClose}
+          onClick={handleClose}
         />
        ))} 
       </Container>

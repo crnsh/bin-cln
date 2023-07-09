@@ -3,7 +3,7 @@ import HeaderTopBodyLeft from "../HeaderTopBodyLeft";
 import UserTradeInfo from "../UserTradeInfo";
 import ChartOrderbookTrades from "./ChartOrderbookTrades";
 
-function getTheme() {
+function useGetTheme() {
   const theme = useTheme();
    if (theme.palette.primary.main === 'rgb(250, 250, 250)') {
     return 'light';

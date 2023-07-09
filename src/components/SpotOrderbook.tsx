@@ -8,6 +8,14 @@ import RedOrderbookIcon from "./RedOrderbookIcon";
 import SplitOrderbookIcon from "./SplitOrderbookIcon";
 import TabPanel from "./TabPanel";
 
+interface OrderbookRow {
+  id : number,
+  color: 'red' | 'green',
+  price : number,
+  amount : number,
+  total : number
+}
+
 function a11yProps(index: number) {
   return {
     id: `simple-tab-${index}`,
@@ -64,7 +72,7 @@ export default function SpotOrderbook () {
   );
 }
 
-const dataRed = [
+const dataRed: OrderbookRow[] = [
   {id : 1, color: 'red', price : 0.123, amount : 412, total : 100},
   {id : 2, color: 'red', price : 0.123, amount : 412, total : 100},
   {id : 3, color: 'red', price : 0.123, amount : 412, total : 100},
@@ -75,7 +83,7 @@ const dataRed = [
   {id : 8, color: 'red', price : 0.123, amount : 412, total : 100},
 ];
 
-const dataGreen = [
+const dataGreen: OrderbookRow[] = [
   {id : 1, color: 'red', price : 0.123, amount : 412, total : 100},
   {id : 2, color: 'red', price : 0.123, amount : 412, total : 100},
   {id : 3, color: 'red', price : 0.123, amount : 412, total : 100},

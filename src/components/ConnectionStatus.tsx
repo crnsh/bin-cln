@@ -5,7 +5,7 @@ export default function ConnectionStatus ({ connectionStatus } : {
   connectionStatus : "STABLE" | "UNSTABLE" | "CONNECTING" | "DISCONNECTED",
 }) {
 
-  let ConnectionIcon : JSX.IntrinsicElements['svg']; // Can only be of type Icon NEEDS TO BE CHANGED
+  let ConnectionIcon : React.ReactNode; // Can only be of type Icon NEEDS TO BE CHANGED
   let ConnectionText : string; // Can only be of type ConnectionText NEEDS TO BE CHANGED
   let ConnectionColor : string;
 

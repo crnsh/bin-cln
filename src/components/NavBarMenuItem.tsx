@@ -1,11 +1,13 @@
 import { MenuItem, Stack, Typography } from "@mui/material";
 
-export default function NavBarMenuItem ({ svgElement, title, description, onClick } : {
-  svgElement : React.ReactNode,
-  title : string,
-  description : string,
-  onClick: () => void
-}) {
+interface NavBarMenuItemType { 
+  svgElement : React.ReactNode, 
+  title : string, 
+  description : string, 
+  onClick : () => void
+}
+
+export default function NavBarMenuItem ({ svgElement, title, description, onClick } : NavBarMenuItemType) {
 
   // This returns a MenuItem with the appropriate color that has the inputted SVG element to its left and 
   // A stack of column-ordered title and description to the right which are left indented

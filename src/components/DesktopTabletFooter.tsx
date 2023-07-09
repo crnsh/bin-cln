@@ -9,7 +9,7 @@ interface footerObject {
   svgElement: JSX.IntrinsicElements['svg']
 }
 
-function getTheme() {
+function useGetTheme() {
   const theme = useTheme();
    if (theme.palette.primary.main === 'rgb(250, 250, 250)') {
     return 'light';
@@ -87,7 +87,7 @@ export default function Footer ({ connectionStatus } : {
           }}
         >
           <TickerTape
-            colorTheme={getTheme()}
+            colorTheme={useGetTheme()}
             showSymbolLogo={false}
             displayMode="regular"
             ></TickerTape>
@@ -96,7 +96,7 @@ export default function Footer ({ connectionStatus } : {
           direction='row'
         >
           {footerObjects.map((element) => (
-            <FooterButton
+            <FooterButton key={element.title}
             displayText={element.title}
             onClickFn={() => (null)}
             onHoverFn={() => (null)}

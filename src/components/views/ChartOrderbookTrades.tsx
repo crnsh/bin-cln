@@ -12,7 +12,7 @@ function a11yProps(index: number) {
   };
 }
 
-function getTheme() {
+function useGetTheme() {
   const theme = useTheme();
    if (theme.palette.primary.main === 'rgb(250, 250, 250)') {
     return 'light';
@@ -45,7 +45,7 @@ export default function ChartOrderbookTrades () {
         >
           <AdvancedRealTimeChart
             autosize
-            theme={getTheme()}
+            theme={useGetTheme()}
           />
         </Box>
       </TabPanel>
