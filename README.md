@@ -1,3 +1,5 @@
+https://www.loom.com/share/2009ffb514eb483eaaf9cd1678983b99?focus_title=1&muted=1&from_recorder=1
+
 This is my attempt at creating a Binance clone. Storybook was malfunctioning with module aliases, so I've created a single storybook without using module aliases. Make sure you have npm version `9.5.0`. Here are some things to note.
 
 - Theming -> Light and Dark Mode (top right button)
